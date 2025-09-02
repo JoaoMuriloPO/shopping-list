@@ -99,3 +99,74 @@ No **próximo passo**, você vai aprender a:
 - Conectar o frontend ReactJS com o backend.
 
 Assim, você terá uma aplicação de lista de compras totalmente funcional 🚀
+
+
+1. Inicialização do projeto React
+
+No terminal, vá até a pasta frontend (que você já criou) e rode:
+# dentro da pasta do projeto principal
+cd frontend
+
+# cria um projeto React com Vite (mais leve que CRA)
+npm create vite@latest . 
+
+# escolha as opções:
+# > Project name: frontend
+# > Framework: React
+# > Variant: JavaScript
+
+# instala dependências do projeto
+npm install
+
+# inicia o servidor
+npm run dev
+
+
+2. Organização correta das páginas
+
+A ideia é estruturar as páginas e os componentes de forma clara, para que seu CRUD de lista de compras fique organizado.
+
+📂 Estrutura recomendada:
+frontend/
+│── public/                # arquivos estáticos
+│── src/
+│   ├── assets/            # imagens, ícones
+│   ├── components/        # componentes reutilizáveis
+│   │   ├── Header.jsx     # cabeçalho
+│   │   ├── ProductCard.jsx# card de produto
+│   │   └── InputForm.jsx  # formulário para adicionar itens
+│   ├── pages/             # páginas principais
+│   │   ├── Home.jsx       # página inicial com a lista
+│   │   └── About.jsx      # exemplo de outra página
+│   ├── services/          # requisições para o backend (Python API)
+│   │   └── api.js
+│   ├── App.jsx            # componente raiz
+│   ├── main.jsx           # ponto de entrada do React
+│── package.json
+Assim, cada parte do projeto fica separada:
+
+components/ → peças reutilizáveis (cards, formulários, botões)
+
+pages/ → telas principais
+
+services/ → conexão com backend
+
+🟦 3. Dependências que você deve baixar
+
+Além do que o Vite já instala, precisamos de algumas libs para CRUD + navegação:
+# React Router DOM → para navegação entre páginas
+npm install react-router-dom
+
+# Axios → para conectar com a API em Python (backend)
+npm install axios
+
+# PropTypes → (opcional) validação de props nos componentes
+npm install prop-types
+
+📌 Com isso você já terá:
+
+React Router → Home, About, etc.
+
+Axios → comunicação com backend Python.
+
+PropTypes → segurança básica de dados nos componentes.
