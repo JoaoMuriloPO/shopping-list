@@ -1,7 +1,7 @@
 
 # Guia de Desenvolvimento: Lista de Compras (CRUD)
 
-Este documento vai te guiar passo a passo na criação do projeto **Lista de Compras** usando **ReactJS (Frontend)** e **Python (Backend)** com **SQLite**.
+Este documento vai te guiar passo a passo na criação do projeto **Lista de Compras** usando **ReactJS (Frontend)** e **Python (Backend)**.
 
 ---
 
@@ -21,7 +21,7 @@ Dentro do seu projeto principal, crie duas pastas principais:
 ```
 /meu-projeto/
   ├── frontend/   → aqui ficará todo o código ReactJS
-  ├── backend/    → aqui ficará todo o código Python (API + banco de dados)
+  ├── backend/    → aqui ficará todo o código Python (API)
 ```
 
 ### Explicação:
@@ -30,7 +30,7 @@ Dentro do seu projeto principal, crie duas pastas principais:
 
 ---
 
-## 🛠️ Preparando o Backend (Python + SQLite)
+## 🛠️ Preparando o Backend (Python)
 
 ### 1. Criar e ativar o ambiente virtual
 No terminal, dentro da pasta `backend/`:
@@ -50,16 +50,6 @@ Ainda dentro do `backend/` com o ambiente virtual ativo:
 pip install fastapi uvicorn sqlite3
 ```
 
-⚠️ **Obs**: o `sqlite3` já vem instalado com o Python, mas incluí para você lembrar que o banco é esse.
-
-### 3. Como instalar/usar o SQLite
-O **SQLite** já vem embutido no Python, então não é preciso instalar nada extra.
-
-Mas, caso queira um **visualizador gráfico** para gerenciar os dados, você pode instalar:
-
-- [DB Browser for SQLite](https://sqlitebrowser.org/)
-
-Com esse programa você poderá abrir o arquivo `.db` que vamos criar no backend e visualizar os produtos direto no banco.
 
 ---
 
